@@ -1,3 +1,4 @@
+import DisplayImage from "@/Components/DisplayImage"
 import styles from "@/styles/Home.module.css"
 import Head from "next/head"
 import { useState } from "react"
@@ -46,14 +47,16 @@ export default function Home() {
       </Head>
       <div id="blob"></div>
       <div id="blur"></div>
-      <h1>Colour Palette Generator</h1>
-      <div className="header">
+      <h1 className="header">Colour Palette Generator</h1>
+      <div>
         <div className="input">
           <label htmlFor="file"> {gallery} Upload Image </label>
           <input type="file" id="file" hidden />
         </div>
       </div>
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <DisplayImage />
+      </main>
     </>
   )
 }
