@@ -45,10 +45,10 @@ body {
   text-align: center;
   font-size: 4rem;
   font-weight: 800;
-  background: linear-gradient(to right, #f2e3db 25%, #e86a33 65%);
+  background: linear-gradient(to right, #f2e3db 25%, #e86a33 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 5px 6px rgba(0, 0, 0, 0.1);
 }
 
 #blob {
@@ -78,4 +78,31 @@ body {
   to {
     rotate: 360deg;
   }
+}
+
+.image {
+  width: 60rem;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+
+  overflow: hidden;
+  transition: all 0.2 ease-in-out;
+}
+
+.image:hover {
+  box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.13);
+}
+
+.image img {
+  width: calc(100% + 1rem);
+  height: calc(100% + 0.5rem);
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
 }
